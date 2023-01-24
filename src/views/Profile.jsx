@@ -1,7 +1,13 @@
+import withAuth from "../hoc/withAuth"
+
 const Profile = () => {
-	return (
-	<h1>Profile</h1>
-	)
+  return (
+    <>
+
+    </>
+
+  )
 }
 
-export default Profile
+export default withAuth(Profile)
+
