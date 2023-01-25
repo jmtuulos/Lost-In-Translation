@@ -1,3 +1,5 @@
+import { STORAGE_KEY_USER } from "../const/storageKeys"
+
 export const storageSave = (key, value) => {
   localStorage.setItem(key, JSON.stringify(value))
 }
@@ -10,5 +12,5 @@ export const storageRead = key => {
 }
 
 export const storageDelete = () => {
-  localStorage.clear()
+  localStorage.removeItem(STORAGE_KEY_USER)
 }

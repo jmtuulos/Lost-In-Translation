@@ -3,6 +3,7 @@ import { useUser } from "../context/UserContext"
 
 const withAuth = Component => props => {
 	const { user } = useUser()
+  
 	if (user !== null) {
 		return <Component {...props} />
 	}
