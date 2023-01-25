@@ -42,3 +42,23 @@ export const loginUser = async (username) => {
     return [ null, user.pop() ]
   return createNewUser(username)
 }
+
+export const saveTranslation = async (user, translation) => {
+  try {
+    const response = await fetch(`${apiUrl}/${user.id}`, {
+      method: 'PATCH',
+      headers: createHeaders(),
+      body: JSON.stringify({
+        translations: [...user.translations, translation]
+      })
+    })
+    if (!response.ok)
+      throw new Error('Could not save translation')
+    const data = await response.json()
+    return [ null, data ]
+  }
+  catch (error){
+    return [ error.message, []]
+  }
+}
+
