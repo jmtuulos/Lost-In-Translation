@@ -11,7 +11,7 @@ const Navbar = () => {
       <nav className="navbar navbar-light bg-light">
         { user !== null &&
           <div className="container-fluid">
-            <img src={logo} width="30" height="35"/>
+            <img src={logo} width="30" alt="robot-logo" height="35"/>
             <ul className="nav navbar-nav">
               <li><NavLink to="/profile">Profile</NavLink></li>
               <li><NavLink to="/translate">Translate</NavLink></li>
