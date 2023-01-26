@@ -62,3 +62,22 @@ export const saveTranslation = async (user, translation) => {
   }
 }
 
+export const clearTranslationHistory = async (user) => {
+  console.log(user.id)
+  try {
+    const response = await fetch(`${apiUrl}/${user.id}`, {
+      method: 'PATCH',
+      headers: createHeaders(),
+      body: JSON.stringify({
+        translations: []
+      })
+    })
+    if (!response.ok)
+      throw new Error('Could not clear translations history')
+    const data = await response.json()
+    return [ null, data ]
+  }
+  catch (error){
+    return [ error.message, []]
+  }
+}
