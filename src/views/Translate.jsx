@@ -11,7 +11,6 @@ const Translate = () => {
       <h1>Translate</h1>
       <TranslateHeader/>
       <TranslateForm/>
-      {/* <TranslateActions/> */}
     </>
     )
 }

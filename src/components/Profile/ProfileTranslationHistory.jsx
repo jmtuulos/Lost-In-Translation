@@ -5,11 +5,11 @@ const ProfileTranslationHistory = ({translations}) => {
   const TranslationHistory = translations.map(
     (item, index) => <ProfileTranslationItem key={ index + '-' + item } item = { item }/>
   )
-
+// should only show 10 latest translations
   return (
     <div>
+      <ProfileHistoryClear/>
       <h3>Your Translation History: </h3>
-      <ProfileHistoryClear/> 
       <ul>{TranslationHistory}</ul>
     </div>
   )
