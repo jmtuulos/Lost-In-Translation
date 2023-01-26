@@ -1,30 +1,8 @@
-import a from "./resources/individial_signs/a.png"
-import b from "./resources/individial_signs/b.png"
-import c from "./resources/individial_signs/c.png"
-import d from "./resources/individial_signs/d.png"
-import e from "./resources/individial_signs/e.png"
-import f from "./resources/individial_signs/f.png"
-import g from "./resources/individial_signs/g.png"
-import h from "./resources/individial_signs/h.png"
-import i from "./resources/individial_signs/i.png"
-import j from "./resources/individial_signs/j.png"
-import k from "./resources/individial_signs/k.png"
-import l from "./resources/individial_signs/l.png"
-import m from "./resources/individial_signs/m.png"
-import n from "./resources/individial_signs/n.png"
-import o from "./resources/individial_signs/o.png"
-import p from "./resources/individial_signs/p.png"
-import q from "./resources/individial_signs/q.png"
-import r from "./resources/individial_signs/r.png"
-import s from "./resources/individial_signs/s.png"
-import t from "./resources/individial_signs/t.png"
-import u from "./resources/individial_signs/u.png"
-import v from "./resources/individial_signs/v.png"
-import w from "./resources/individial_signs/w.png"
-import x from "./resources/individial_signs/x.png"
-import y from "./resources/individial_signs/y.png"
-import z from "./resources/individial_signs/z.png"
+import image1 from "./resources/images/undraw_person.svg"
+import image2 from "./resources/images/interpreter-41437.svg"
+// images = {
+//   profilepic
+// }
+export const translatepic = image2
+export const profilepic = image1
 
-const images = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z };
-
-export default images
