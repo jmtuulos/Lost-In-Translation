@@ -6,9 +6,10 @@ const ProfileActions = () => {
   const { setUser } = useUser()
 
   const handleLogoutClick = () => {
-    if (window.confirm('Confirm logout?'))
+    if (window.confirm('Confirm logout?')){
       storageDelete()
       setUser(null)
+    }
   }
 
   return (
