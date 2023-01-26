@@ -14,3 +14,4 @@ export const storageRead = key => {
 export const storageDelete = () => {
   localStorage.removeItem(STORAGE_KEY_USER)
 }
+

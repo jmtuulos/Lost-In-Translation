@@ -6,8 +6,6 @@ import { useUser } from "../context/UserContext"
 import withAuth from "../hoc/withAuth"
 
 const Translate = () => {
-  const { user } = useUser()
-
   return (
     <>
       <h1>Translate</h1>

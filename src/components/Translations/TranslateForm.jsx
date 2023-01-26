@@ -16,8 +16,10 @@ const TranslateForm = () => {
   const [ loading, setLoading ] = useState(false)
 
   const onSubmit = async (data) => {
-    setLoading(true)
     data.translation = data.translation.toLowerCase().replace(/[^a-z]/gi, "")
+    if (!data.translation)
+      return
+    setLoading(true)
     const [error, translateResponse] = await saveTranslation(
         user,
         data.translation
