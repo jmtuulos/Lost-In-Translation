@@ -35,14 +35,28 @@ const TranslateForm = () => {
   }
 
   return (
-    <form onSubmit={ handleSubmit(onSubmit) }>
-      <textarea {...register("translation")} type="text" className="form-control"
-      placeholder="Translation" maxLength={40} rows="3"
-      required />
-      <input disabled={ loading } type="submit"/>
-      { apiError && <p>{ apiError }</p>}
-      { translation !== null && <ul>{ TranslationShow( { translation } ) }</ul>}
-    </form>
+    <div className="container-21 container-flex">
+      <form onSubmit={ handleSubmit(onSubmit) }>
+        <textarea {...register("translation")}
+          type="text"
+          className="form-control"
+          placeholder="Enter your translation here"
+          maxLength={40}
+          rows="3"
+          required />
+        <input
+          className="button-23"
+          disabled={ loading }
+          type="submit"
+          value="Translate"/>
+        { apiError && <p>{ apiError }</p>}
+        { translation !== null &&
+          <div className="container-23">
+            <ul>{ TranslationShow( { translation } ) }</ul>
+          </div>
+        }
+      </form>
+    </div>
   )
 
 }

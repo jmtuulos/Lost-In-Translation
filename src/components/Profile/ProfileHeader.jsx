@@ -1,6 +1,10 @@
 const ProfileHeader = ({username}) => {
   return (
-      <h1 class="profileName">{username}</h1>
+    <header>
+      <h3 className="header-1">
+        Profile
+      </h3>
+  </header>
   )
 }
 

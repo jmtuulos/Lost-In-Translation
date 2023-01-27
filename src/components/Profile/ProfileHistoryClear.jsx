@@ -27,7 +27,7 @@ export const ProfileHistoryClear = () => {
     <>
       <button
       type="button"
-      className="btn btn-primary"
+      className="button-23"
       disabled={ loading }
       onClick={ handleHistoryClear }>Clear history</button>
       { loading && <p>Clearing history</p> }

@@ -1,4 +1,3 @@
-import ProfileActions from "../components/Profile/ProfileActions"
 import ProfileHeader from "../components/Profile/ProfileHeader"
 import ProfileTranslationHistory from "../components/Profile/ProfileTranslationHistory"
 import { useUser } from "../context/UserContext"
@@ -9,10 +8,16 @@ const Profile = () => {
   const { user } = useUser()
 
   return (
-    <div class="profile container-fluid">
+    <>
       <ProfileHeader username={user.username}/>
-      <ProfileTranslationHistory translations={user.translations}/>
-    </div>
+      <div className="profile container-fluid">
+        <div>
+          <h3>Name: {user.username}</h3>
+          <ul>Nr of Translations: {user.translations.length}</ul>
+        </div>
+        <ProfileTranslationHistory translations={user.translations}/>
+      </div>
+    </>
   )
 }
 

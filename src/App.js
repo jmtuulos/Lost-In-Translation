@@ -9,13 +9,13 @@ function App() {
 
   return (
       <BrowserRouter>
-        <div class="App">
+        <div className="App">
           <Navbar/>
-          <Routes>
-            <Route path="/" element={ <Login/> } />
-            <Route path="/profile" element={ <Profile/>} />
-            <Route path="/translate" element={ <Translate/> } />
-          </Routes>
+            <Routes>
+              <Route path="/" element={ <Login/> } />
+              <Route path="/profile" element={ <Profile/>} />
+              <Route path="/translate" element={ <Translate/> } />
+            </Routes>
         </div>
       </BrowserRouter>
   )

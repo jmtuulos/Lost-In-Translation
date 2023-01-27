@@ -1,8 +1,8 @@
 const TranslateHeader = () => {
   return (
     <header>
-      <h3>
-        Translate text to American sign language
+      <h3 className="header-1">
+        Translate
       </h3>
     </header>
   )

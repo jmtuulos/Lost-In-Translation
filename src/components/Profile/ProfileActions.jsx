@@ -13,7 +13,7 @@ const ProfileActions = () => {
   }
 
   return (
-      <button class="btn btn-primary active" onClick={ handleLogoutClick }>Logout</button>
+      <button className="button-23" onClick={ handleLogoutClick }>Logout</button>
   )
 }
 

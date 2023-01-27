@@ -1,21 +1,26 @@
 import { NavLink } from "react-router-dom"
 import { useUser } from "../../context/UserContext"
 import ProfileActions from "../Profile/ProfileActions"
-import logo from './Logo.png'
-import { profilepic, translatepic } from "../../images.js"
+import { navpic, profilepic, translatepic } from "../../images.js"
 
 const Navbar = () => {
   const { user } = useUser()
 
   return (
-    <nav class="navbar navbar-expand-sm">
+    <nav className="navbar navbar-expand-sm">
       { user !== null &&
-        <div class="container-fluid">
-          <img src={ translatepic } width="30" alt="sign-language" height="50"/>
-          <ul class="navbar-nav">
-            <li class="nav-item"><NavLink class="nav-link" to="/profile"><img width="30px" src={ profilepic }/></NavLink></li>
-            <li class="nav-item"><NavLink class="nav-link" to="/translate"><img width="30px" src={ translatepic }/></NavLink></li>
-            <li class="nav-item"><ProfileActions user={ user }/></li>
+        <div className="container-fluid">
+            <div>
+              <img src={navpic} width="30px" alt="Wave hand"/>
+              <h4>Hello there,</h4>
+              <h2>{user.username}</h2>
+            </div>
+
+
+          <ul className="navbar-nav">
+            <li className="nav-item"><NavLink className="nav-link" to="/profile"><img width="30px" alt="profilepicture" src={ profilepic }/></NavLink></li>
+            <li className="nav-item"><NavLink className="nav-link" to="/translate"><img width="30px" alt ="translatehands" src={ translatepic }/></NavLink></li>
+            <li className="nav-item"><ProfileActions user={ user }/></li>
           </ul>
         </div>
       }
