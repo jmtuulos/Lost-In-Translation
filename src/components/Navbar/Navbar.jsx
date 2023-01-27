@@ -17,7 +17,7 @@ const Navbar = () => {
           <ul className="navbar-nav">
             <li className="nav-item"><NavLink className="nav-link" to="/profile"><img width="30px" alt="profilepicture" src={ profilepic }/></NavLink></li>
             <li className="nav-item"><NavLink className="nav-link" to="/translate"><img width="30px" alt ="translatehands" src={ translatepic }/></NavLink></li>
-            <li className="nav-item"><ProfileActions user={ user }/></li>
+            <li className="nav-item"><ProfileActions/></li>
           </ul>
         </div>
       }
