@@ -37,7 +37,7 @@ export const createNewUser = async (username) => {
 export const loginUser = async (username) => {
   const [ checkError, user ] = await checkForUser(username)
   if (checkError !== null)
-    return [checkError, null]
+    return [checkError, []]
   if (user.length > 0)
     return [ null, user.pop() ]
   return createNewUser(username)

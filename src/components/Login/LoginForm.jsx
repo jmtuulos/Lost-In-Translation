@@ -17,7 +17,7 @@ const LoginForm = () => {
 		const [error, userResponse] = await loginUser(data.name)
 		if (error !== null)
 			setApiError(error)
-		if (userResponse !== null){
+		if (userResponse !== []){
 			setUser(userResponse)
 			storageSave(STORAGE_KEY_USER, userResponse)
 		}
@@ -34,14 +34,20 @@ const LoginForm = () => {
 
 	return (
 		<form onSubmit={ handleSubmit(onSubmit) }>
-			<input {...register("name")} type="text"
-			minLength="3"
-			placeholder="Enter username"
-			required/>
-			<input disabled={ loading } type="submit"/>
-			{loading && <p>Logging in</p>}
-			{ apiError && <p>{ apiError }</p>}
-		</form>
+			<div>
+        <input {...register("name")} type="text"
+        minLength="3"
+        placeholder="Enter Your name"
+        required/>
+      </div>
+      <input
+        className="button-23"
+        disabled={ loading }
+        type="submit"
+        value="Log in"/>
+      {loading && <p>Logging in</p>}
+      { apiError && <p>{ apiError }</p>}
+  </form>
 	)
 }
 
