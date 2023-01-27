@@ -11,12 +11,9 @@ const Navbar = () => {
       { user !== null &&
         <div className="container-fluid">
             <div>
-              <img src={navpic} width="30px" alt="Wave hand"/>
               <h4>Hello there,</h4>
               <h2>{user.username}</h2>
             </div>
-
-
           <ul className="navbar-nav">
             <li className="nav-item"><NavLink className="nav-link" to="/profile"><img width="30px" alt="profilepicture" src={ profilepic }/></NavLink></li>
             <li className="nav-item"><NavLink className="nav-link" to="/translate"><img width="30px" alt ="translatehands" src={ translatepic }/></NavLink></li>

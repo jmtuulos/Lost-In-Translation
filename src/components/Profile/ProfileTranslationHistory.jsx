@@ -6,7 +6,7 @@ const ProfileTranslationHistory = ({translations}) => {
     .slice(-10).reverse().map((item, index) =>
       <ProfileTranslationItem key={ index + '-' + item } item = { item }/>
   )
-// should only show 10 latest translations
+
   return (
     <div>
       <ProfileHistoryClear/>

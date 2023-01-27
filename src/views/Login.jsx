@@ -10,7 +10,7 @@ const Login = () => {
             <LoginForm/>
           </ul>
         </div>
-        <img src={loginpagepic} alt="All signs of sign language" className="img-thumbnail w-75 "/>
+        <img src={loginpagepic} alt="All signs of sign language" className="img-front w-75"/>
       </div>
   )
 }

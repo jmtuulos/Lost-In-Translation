@@ -10,12 +10,12 @@ const Profile = () => {
   return (
     <>
       <ProfileHeader username={user.username}/>
-      <div className="profile container-fluid">
-        <div>
+      <div>
+        <div className="profile">
           <h3>Name: {user.username}</h3>
           <ul>Nr of Translations: {user.translations.length}</ul>
+          <ProfileTranslationHistory translations={user.translations}/>
         </div>
-        <ProfileTranslationHistory translations={user.translations}/>
       </div>
     </>
   )

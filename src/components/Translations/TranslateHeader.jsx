@@ -1,9 +1,7 @@
 const TranslateHeader = () => {
   return (
     <header>
-      <h3 className="header-1">
-        Let's do some signing
-      </h3>
+      <h3 className="header-1">Translation</h3>
     </header>
   )
 }

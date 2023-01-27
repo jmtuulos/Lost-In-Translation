@@ -44,7 +44,7 @@ const TranslateForm = () => {
           maxLength={40}
           rows="3"
           required />
-        <div class="form-text">Non-american-english alphabetic characters are ignored.</div>
+        <div className="form-text">Non-american-english alphabetic characters are ignored.</div>
         <input
           className="button-23"
           disabled={ loading }
